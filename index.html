@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlett Trillia - Integrative Support for Spiritual Entrepreneurs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FAF7F2;
+            --charcoal: #2C2C2C;
+            --terracotta: #B8403A;
+            --sage: #7A9B7E;
+            --gold: #D4AF37;
+            --serif: 'Crimson Text', serif;
+            --sans: 'Space Grotesk', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--sans);
+            background: var(--cream);
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+        
+        
+        /* Header Venn Diagram */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 120px;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+        
+        .venn-logo {
+            width: 120px;
+            height: 60px;
+            position: relative;
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.3s forwards;
+        }
+        
+        .venn-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .venn-circle-svg {
+            fill: none;
+            stroke-width: 2.5;
+        }
+        
+        .circle-left-svg {
+            stroke: var(--charcoal);
+            animation: drawCircle 1.5s ease-out 0.5s forwards;
+        }
+        
+        .circle-right-svg {
+            stroke: var(--terracotta);
+            animation: drawCircle 1.5s ease-out 0.8s forwards;
+        }
+        
+        @keyframes drawCircle {
+            from {
+                stroke-dasharray: 200;
+                stroke-dashoffset: 200;
+            }
+            to {
+                stroke-dasharray: 200;
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 60px;
+            min-height: 100vh;
+        }
+        
+        /* Hero Section with Image */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 140px;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+        
+        .hero-content {
+            order: 1;
+        }
+        
+        .hero-image {
+            order: 2;
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        h1 {
+            font-family: var(--serif);
+            font-size: clamp(56px, 10vw, 96px);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--terracotta) 0%, var(--charcoal) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-family: var(--sans);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: rgba(44, 44, 44, 0.5);
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+        
+        .offering {
+            font-family: var(--serif);
+            font-size: 22px;
+            color: var(--sage);
+            font-weight: 400;
+            font-style: italic;
+        }
+        
+        /* Bio section */
+        .bio-section {
+            margin-bottom: 140px;
+            animation: fadeInUp 1s ease-out 0.7s backwards;
+            text-align: center;
+        }
+        
+        .bio-text {
+            font-family: var(--serif);
+            font-size: clamp(22px, 3.5vw, 28px);
+            line-height: 1.65;
+            font-weight: 400;
+            color: var(--charcoal);
+            max-width: 800px;
+            margin-bottom: 32px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .bio-accent-image {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 32px;
+            margin-top: 32px;
+        }
+        
+        .bio-accent-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            object-position: center top;
+        }
+        
+        .bio-accent-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Read More Toggle */
+        .read-more-toggle {
+            background: none;
+            border: none;
+            font-family: var(--sans);
+            font-size: 14px;
+            color: var(--terracotta);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .read-more-toggle:hover {
+            color: var(--sage);
+        }
+        
+        .read-more-toggle::after {
+            content: '↓';
+            transition: transform 0.3s ease;
+        }
+        
+        .read-more-toggle.active::after {
+            transform: rotate(180deg);
+        }
+        
+        .full-bio {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, margin-top 0.5s ease-out;
+        }
+        
+        .full-bio.expanded {
+            max-height: 3000px;
+            margin-top: 40px;
+            text-align: left;
+        }
+        
+        .bio-detail {
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+        
+        .bio-detail a {
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .bio-detail a:hover {
+            color: var(--sage);
+        }
+        
+        .bio-section-title {
+            font-family: var(--serif);
+            font-size: 22px;
+            color: var(--terracotta);
+            margin-top: 32px;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        
+        .bio-section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .bio-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .bio-list li {
+            font-family: var(--sans);
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .bio-list li::before {
+            content: '·';
+            position: absolute;
+            left: 8px;
+            color: var(--terracotta);
+            font-size: 20px;
+        }
+        
+        .bio-list li strong {
+            color: var(--terracotta);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            margin-bottom: 140px;
+            animation: fadeInUp 1s ease-out 0.9s backwards;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(122, 155, 126, 0.2);
+            padding: 70px;
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .cta-content {
+            order: 1;
+        }
+        
+        .cta-image {
+            order: 2;
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .cta-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .cta-title {
+            font-family: var(--serif);
+            font-size: 42px;
+            color: var(--charcoal);
+            margin-bottom: 24px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        
+        .cta-description {
+            font-family: var(--sans);
+            font-size: 17px;
+            line-height: 1.7;
+            color: rgba(44, 44, 44, 0.8);
+            margin-bottom: 32px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            font-family: var(--sans);
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--cream);
+            background: var(--terracotta);
+            padding: 16px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--terracotta);
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: var(--terracotta);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(198, 123, 92, 0.2);
+        }
+        
+        /* Services Section */
+        .services-section {
+            margin-bottom: 140px;
+            animation: fadeInUp 1s ease-out 1.0s backwards;
+        }
+
+        .services-title {
+            font-family: var(--serif);
+            font-size: 42px;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .services-intro {
+            font-family: var(--sans);
+            font-size: 17px;
+            line-height: 1.7;
+            color: rgba(44, 44, 44, 0.7);
+            margin-bottom: 48px;
+            max-width: 640px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(122, 155, 126, 0.2);
+            border-radius: 12px;
+            padding: 36px;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border-color: rgba(122, 155, 126, 0.4);
+        }
+
+        .service-card.featured {
+            background: rgba(184, 64, 58, 0.04);
+            border-color: rgba(184, 64, 58, 0.2);
+        }
+
+        .service-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .service-tag {
+            font-family: var(--sans);
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--sage);
+            margin-bottom: 12px;
+        }
+
+        .service-tag.free {
+            color: var(--sage);
+        }
+
+        .service-name {
+            font-family: var(--serif);
+            font-size: 24px;
+            color: var(--charcoal);
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .service-duration {
+            font-family: var(--sans);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(44, 44, 44, 0.4);
+            margin-bottom: 16px;
+        }
+
+        .service-description {
+            font-family: var(--sans);
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(44, 44, 44, 0.75);
+            margin-bottom: 28px;
+            flex-grow: 1;
+        }
+
+        .service-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: auto;
+        }
+
+        .service-price {
+            font-family: var(--serif);
+            font-size: 28px;
+            color: var(--terracotta);
+            font-weight: 600;
+        }
+
+        .service-price.free-price {
+            font-size: 20px;
+            color: var(--sage);
+        }
+
+        .service-btn {
+            display: inline-block;
+            font-family: var(--sans);
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--cream);
+            background: var(--terracotta);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--terracotta);
+            white-space: nowrap;
+        }
+
+        .service-btn:hover {
+            background: transparent;
+            color: var(--terracotta);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(184, 64, 58, 0.2);
+        }
+
+        .service-btn.outline {
+            background: transparent;
+            color: var(--terracotta);
+        }
+
+        .service-btn.outline:hover {
+            background: var(--terracotta);
+            color: var(--cream);
+        }
+
+        .service-btn.sage-btn {
+            background: var(--sage);
+            border-color: var(--sage);
+        }
+
+        .service-btn.sage-btn:hover {
+            background: transparent;
+            color: var(--sage);
+        }
+
+        /* Three Pillars detail */
+        .pillars-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        .pillars-list li {
+            font-family: var(--sans);
+            font-size: 14px;
+            color: rgba(44, 44, 44, 0.7);
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            border-bottom: 1px solid rgba(122, 155, 126, 0.1);
+        }
+
+        .pillars-list li:last-child {
+            border-bottom: none;
+        }
+
+        .pillars-list li::before {
+            content: '·';
+            position: absolute;
+            left: 4px;
+            color: var(--terracotta);
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        /* Satya Circle Section */
+        .satya-section {
+            margin-bottom: 140px;
+            animation: fadeInUp 1s ease-out 1.1s backwards;
+            background: linear-gradient(135deg, rgba(184, 64, 58, 0.04) 0%, rgba(122, 155, 126, 0.06) 100%);
+            border: 1px solid rgba(184, 64, 58, 0.15);
+            border-radius: 16px;
+            padding: 70px;
+        }
+
+        .satya-eyebrow {
+            font-family: var(--sans);
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--terracotta);
+            margin-bottom: 16px;
+        }
+
+        .satya-title {
+            font-family: var(--serif);
+            font-size: clamp(36px, 5vw, 52px);
+            color: var(--charcoal);
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.1;
+        }
+
+        .satya-subtitle {
+            font-family: var(--serif);
+            font-size: 20px;
+            color: var(--sage);
+            font-style: italic;
+            margin-bottom: 32px;
+        }
+
+        .satya-description {
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.75;
+            color: rgba(44, 44, 44, 0.8);
+            max-width: 100%;
+            margin-bottom: 48px;
+        }
+
+        .satya-includes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .satya-include-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            border: 1px solid rgba(122, 155, 126, 0.15);
+        }
+
+        .satya-include-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .satya-include-text {
+            font-family: var(--sans);
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(44, 44, 44, 0.8);
+        }
+
+        .satya-include-text strong {
+            display: block;
+            color: var(--charcoal);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .satya-pricing {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            padding-top: 32px;
+            border-top: 1px solid rgba(184, 64, 58, 0.15);
+        }
+
+        .satya-price-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .satya-value {
+            font-family: var(--sans);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(44, 44, 44, 0.4);
+            margin-bottom: 4px;
+        }
+
+        .satya-value-amount {
+            font-family: var(--serif);
+            font-size: 20px;
+            color: rgba(44, 44, 44, 0.4);
+            text-decoration: line-through;
+        }
+
+        .satya-beta-label {
+            font-family: var(--sans);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--terracotta);
+            margin-bottom: 4px;
+        }
+
+        .satya-beta-price {
+            font-family: var(--serif);
+            font-size: 42px;
+            color: var(--terracotta);
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .satya-spots {
+            font-family: var(--sans);
+            font-size: 13px;
+            color: rgba(44, 44, 44, 0.5);
+            font-style: italic;
+        }
+
+        /* YTT Section */
+        .ytt-section {
+            margin-bottom: 140px;
+            animation: fadeInUp 1s ease-out 1.2s backwards;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(122, 155, 126, 0.2);
+            border-radius: 12px;
+            padding: 60px 70px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ytt-eyebrow {
+            font-family: var(--sans);
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--sage);
+            margin-bottom: 12px;
+        }
+
+        .ytt-title {
+            font-family: var(--serif);
+            font-size: 36px;
+            color: var(--charcoal);
+            font-weight: 400;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .ytt-description {
+            font-family: var(--sans);
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(44, 44, 44, 0.7);
+        }
+
+        .ytt-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .ytt-badge {
+            font-family: var(--sans);
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--sage);
+            background: rgba(122, 155, 126, 0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card.full-width {
+                grid-column: 1;
+                grid-template-columns: 1fr !important;
+            }
+
+            .service-card.full-width > div:last-child {
+                min-height: 240px !important;
+            }
+
+            .satya-includes {
+                grid-template-columns: 1fr;
+            }
+
+            .satya-section {
+                padding: 40px 32px;
+            }
+
+            .satya-pricing {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .ytt-section {
+                grid-template-columns: 1fr;
+                padding: 40px 32px;
+            }
+        }
+        
+        /* Links section */
+        .links-section {
+            animation: fadeInUp 1s ease-out 1.1s backwards;
+            margin-bottom: 100px;
+        }
+        
+        .section-title {
+            font-family: var(--sans);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: rgba(44, 44, 44, 0.4);
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+        
+        .links-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .simple-link {
+            font-family: var(--sans);
+            font-size: 16px;
+            color: var(--charcoal);
+            text-decoration: none;
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
+        
+        .simple-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--terracotta);
+            transition: width 0.3s ease;
+        }
+        
+        .simple-link:hover {
+            color: var(--terracotta);
+        }
+        
+        .simple-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 120px;
+            padding-top: 60px;
+            border-top: 1px solid rgba(122, 155, 126, 0.15);
+            font-family: var(--sans);
+            font-size: 12px;
+            color: rgba(44, 44, 44, 0.4);
+            text-align: center;
+            animation: fadeInUp 1s ease-out 1.3s backwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 60px 24px;
+            }
+            
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero-content {
+                order: 2;
+            }
+            
+            .hero-image {
+                order: 1;
+                height: 400px;
+            }
+            
+            .cta-section {
+                grid-template-columns: 1fr;
+                padding: 32px;
+            }
+            
+            .cta-content {
+                order: 1;
+            }
+            
+            .cta-image {
+                order: 2;
+            }
+            
+            .venn-circle {
+                width: 60vw;
+                height: 60vw;
+            }
+            
+            .circle-left {
+                left: 10%;
+            }
+            
+            .circle-right {
+                right: 10%;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <div class="venn-logo">
+                <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="venn-circle-svg circle-left-svg" cx="35" cy="30" r="28" />
+                    <circle class="venn-circle-svg circle-right-svg" cx="85" cy="30" r="28" />
+                </svg>
+            </div>
+            <h1>Scarlett Trillia</h1>
+            <div class="tagline">Yoga · Ayurveda · Jyotish</div>
+        </header>
+        
+        <!-- Bio Section -->
+        <section class="bio-section">
+            
+            <p class="bio-text">
+                Welcome to my intersection of ancient wisdom and modern day self-mastery — where the past meets the future in this present moment.
+            </p>
+
+            <p class="bio-text">
+                I have over a decade and thousands of hours of formal training and committed practice in the ancient Vedic sciences of Yoga, Ayurveda, and Jyotish. I offer integrated sessions and group trainings to those who are ready for deep, meaningful transformation.
+            </p>
+
+            <p class="bio-text">
+                My work is highly personalized, accessible to all beings, and designed to cultivate self-mastery, wellbeing, and contentment.
+            </p>
+
+            <div class="bio-accent-image">
+                <img src="padma.jpg" alt="Scarlett Trillia yoga practice">
+            </div>
+            
+            <button class="read-more-toggle" id="bioToggle">Read Full Bio</button>
+            
+            <div class="full-bio" id="fullBio">
+                <h3 class="bio-section-title">About Me</h3>
+                <p class="bio-detail">
+                    I discovered yoga as a teenager, and what began as curiosity became a lifelong calling. In 2015 I began my formal study in the Vedic sciences, and over the past decade I have taught in private, studio, retreat, and virtual settings across the world — bringing an integrative approach that weaves together all three pillars of the Vedic traditions.
+                </p>
+                <p class="bio-detail">
+                    My path has been shaped as much by life as by study. As a 2x cancer survivor and serial entrepreneur, I have navigated profound personal transformation alongside the demands of building and leading new businesses and organizations. These experiences inform the way I show up for every client, with both learned wisdom and lived understanding.
+                </p>
+
+                <h3 class="bio-section-title">The Vedic Arts & Sciences</h3>
+                <p class="bio-detail">
+                    I am a long-time student of Dr. Justine Lemos, PhD. Our lineage integrates three ancient 
+                    modalities that work together as a complete system:
+                </p>
+                
+                <ul class="bio-list">
+                    <li><strong>Yoga (Yoke / Union) for the Mind:</strong> Certified YTT-500 yoga instructor 
+                    via Western Yoga College. I teach postural yoga, meditation, subtle body anatomy (chakras), 
+                    pranayama, philosophy, and more.</li>
+                    
+                    <li><strong>Ayurveda (The Science of Life) for the Body:</strong> Certified Ayurvedic 
+                    Lifestyle Counselor offering comprehensive health and lifestyle assessments with personalized 
+                    practices and remedies.</li>
+                    
+                    <li><strong>Jyotish (The Science of Light) for the Spirit:</strong> Trained, intuitive 
+                    Vedic astrologer using birth charts to provide spiritual counseling and pragmatic advice 
+                    and insights for life and business.</li>
+                </ul>
+
+                <h3 class="bio-section-title">Technology & Entrepreneurship</h3>
+                <p class="bio-detail">
+                    I've spent my career building businesses from the ground up, working for nearly 20 years 
+                    alongside founders, leaders, and innovators. I am the Co-Founder and CEO of Porter Labs 
+                    (<a href="https://www.porterlabs.ai" target="_blank">porterlabs.ai</a>), a pet tech startup 
+                    innovating at the intersection of deep technology and animal wellness.
+                </p>
+            </div>
+        </section>
+        
+
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <h2 class="services-title">Work With Me</h2>
+            <p class="services-intro">
+                All sessions draw on the full spectrum of Vedic wisdom — Yoga, Ayurveda, and Jyotish — 
+                integrated and tailored to your unique journey.
+            </p>
+
+            <div class="services-grid">
+
+                <!-- Free Call -->
+                <div class="service-card">
+                    <div class="service-tag free">Start Here</div>
+                    <div class="service-name">Free Assessment Call</div>
+                    <div class="service-duration">20 Minutes</div>
+                    <p class="service-description">
+                        We'll exchange introductions, explore your goals, and find the right path forward together. No commitment required.
+                    </p>
+                    <div class="service-footer">
+                        <div class="service-price free-price">Free</div>
+                        <a href="https://calendly.com/scarlett_trillia/consult" class="service-btn sage-btn" target="_blank" rel="noopener">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Deep Dive -->
+                <div class="service-card featured">
+                    <div class="service-tag">Most Popular</div>
+                    <div class="service-name">Deep Dive Session</div>
+                    <div class="service-duration">90 Minutes</div>
+                    <p class="service-description">
+                        A comprehensive Jyotish reading with Ayurvedic insights and lifestyle recommendations — including both practical and esoteric remedies personalized to you.
+                    </p>
+                    <div class="service-footer">
+                        <div class="service-price">$333</div>
+                        <a href="https://buy.stripe.com/3cI6oH08n91i0l9atl0Jq01" class="service-btn" target="_blank" rel="noopener">Book Session</a>
+                    </div>
+                </div>
+
+                <!-- Follow Up -->
+                <div class="service-card featured">
+                    <div class="service-tag">Follow-On</div>
+                    <div class="service-name">Follow-Up Session</div>
+                    <div class="service-duration">60 Minutes · Within 30 Days of Deep Dive</div>
+                    <p class="service-description">
+                        Go deeper into a specific focus area, revisit your remedies, and answer any questions that have arisen since your Deep Dive.
+                    </p>
+                    <div class="service-footer">
+                        <div class="service-price">$188</div>
+                        <a href="https://buy.stripe.com/28E7sL3kzelCgk78ld0Jq02" class="service-btn" target="_blank" rel="noopener">Book Session</a>
+                    </div>
+                </div>
+
+                <!-- Three Pillars -->
+                <div class="service-card">
+                    <div class="service-tag">Full System</div>
+                    <div class="service-name">Three Pillars Package</div>
+                    <div class="service-duration">3 × 60-Minute Sessions + 30-Min Follow-Up</div>
+                    <ul class="pillars-list">
+                        <li><strong>Yoga</strong> — Mind: posture, meditation, breath & philosophy</li>
+                        <li><strong>Ayurveda</strong> — Body: constitution, lifestyle & remedies</li>
+                        <li><strong>Jyotish</strong> — Spirit: birth chart, counseling & insight</li>
+                    </ul>
+                    <p class="service-description">
+                        Three dedicated sessions over three weeks — one per pillar — with ongoing support from Scarlett throughout. Includes a collaborative case review with an Ayurvedic Vaidya, a curated folder of personalized resources and practices, and a 30-minute follow-up call 40 days after the series concludes.
+                    </p>
+                    <div class="service-footer">
+                        <div class="service-price">$888</div>
+                        <a href="https://buy.stripe.com/6oU3cv5sHelC2th8ld0Jq00" class="service-btn" target="_blank" rel="noopener">Book Package</a>
+                    </div>
+                </div>
+
+                <!-- Custom Package -->
+                <div class="service-card full-width" style="display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: center;">
+                    <div style="height: 100%; min-height: 320px; border-radius: 8px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.08);">
+                        <img src="IMG_3218.JPG" alt="Hands touching water" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                    <div>
+                        <div class="service-tag">Bespoke</div>
+                        <div class="service-name">Custom 1-1 Package</div>
+                        <div class="service-duration">Ongoing Engagement</div>
+                        <p class="service-description">
+                            For those navigating life transitions, pursuing personal or business milestones, or seeking ongoing integrative counseling and coaching. Fully customized to fit your needs, lifestyle, and rhythms. Let's talk to design the right container for you.
+                        </p>
+                        <div class="service-footer">
+                            <div class="service-price" style="font-size: 20px; color: var(--charcoal);">Pricing by consultation</div>
+                            <a href="https://calendly.com/scarlett_trillia/consult" class="service-btn outline" target="_blank" rel="noopener">Let's Talk</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Satya Circle Section -->
+        <section class="satya-section">
+            <div class="satya-eyebrow">Group Offering · Beta Cohort</div>
+            <h2 class="satya-title">The Satya Circle</h2>
+            <p class="satya-subtitle">A three-month container for truth-seekers and spiritual entrepreneurs</p>
+            <p class="satya-description">
+                An intimate cohort of six, meeting weekly to cultivate the foundations of self-mastery. 
+                Drawing on Jyotish, Ayurveda, and Yoga, each week we explore the astrology of the moment 
+                and how it touches your individual life — building practices, knowledge, and community 
+                that supports your growth from the inside out.
+            </p>
+
+            <div class="satya-includes">
+                <div class="satya-include-item">
+                    <div class="satya-include-icon">☽</div>
+                    <div class="satya-include-text">
+                        <strong>Weekly 1-1 Session</strong>
+                        Personalized integrated support across all three modalities (12 sessions)
+                    </div>
+                </div>
+                <div class="satya-include-item">
+                    <div class="satya-include-icon">◯</div>
+                    <div class="satya-include-text">
+                        <strong>Weekly Group Satsang</strong>
+                        Astrology of the moment, practice, Q&A, and case studies (12 sessions)
+                    </div>
+                </div>
+                <div class="satya-include-item">
+                    <div class="satya-include-icon">✦</div>
+                    <div class="satya-include-text">
+                        <strong>Dedicated Private Forum</strong>
+                        Daily content, async support, and community throughout the program
+                    </div>
+                </div>
+                <div class="satya-include-item">
+                    <div class="satya-include-icon">◈</div>
+                    <div class="satya-include-text">
+                        <strong>Handouts & Resources</strong>
+                        Curated book recommendations and reference materials
+                    </div>
+                </div>
+                <div class="satya-include-item">
+                    <div class="satya-include-icon">❋</div>
+                    <div class="satya-include-text">
+                        <strong>YTT Priority Access</strong>
+                        Prequalify and receive early access to the upcoming Vedic YTT program
+                    </div>
+                </div>
+            </div>
+
+            <div class="satya-pricing">
+                <div class="satya-price-block">
+                    <div class="satya-value">Total Value</div>
+                    <div class="satya-value-amount">$3,333</div>
+                </div>
+                <div class="satya-price-block">
+                    <div class="satya-beta-label">Beta Price · Limited Spots</div>
+                    <div class="satya-beta-price">$2,200</div>
+                </div>
+                <div style="margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+                    <p class="satya-spots">Limited to 6 participants</p>
+                    <a href="https://tally.so/r/kdWgM1" class="service-btn" target="_blank" rel="noopener">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- YTT Section -->
+        <section class="ytt-section" style="grid-template-columns: 1fr 340px;">
+            <div>
+                <div class="ytt-eyebrow">Coming Soon</div>
+                <h2 class="ytt-title">Three Pillars Yoga Teacher Training</h2>
+                <p class="ytt-description">
+                    A Vedic-rooted YTT program integrating Yoga, Ayurveda, and Jyotish as a complete system 
+                    for self-mastery and teaching. Be the first to receive details, dates, and early access 
+                    when registration opens.
+                </p>
+                <div class="ytt-cta">
+                    <div class="ytt-badge">Notify Me</div>
+                    <a href="https://tally.so/r/q4Wgx7" class="service-btn outline" target="_blank" rel="noopener">Join the Waitlist</a>
+                </div>
+            </div>
+            <div style="height: 100%; min-height: 280px; border-radius: 8px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.08);">
+                <img src="mudra.jpg" alt="Mudra hand gesture" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+        </section>
+
+        <!-- Links Section -->
+        <section class="links-section">
+            <div class="links-stack">
+                <a href="https://www.linkedin.com/in/scarlettslist/" class="simple-link" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="/cdn-cgi/l/email-protection#14677775667871606067787d6760547379757d783a777b79" class="simple-link">Email Me</a>
+                <a href="https://calendly.com/scarlett_trillia/consult" class="simple-link" target="_blank" rel="noopener">Schedule a Consultation</a>
+                <a href="https://gmail.us14.list-manage.com/subscribe/post?u=7037faf140dc1be904901c033&id=dbb0683bf5&f_id=00e6b4e5f0" class="simple-link" target="_blank" rel="noopener">Subscribe to Newsletter</a>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 Scarlett Trillia. All rights reserved.
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('bioToggle').addEventListener('click', function() {
+                const fullBio = document.getElementById('fullBio');
+                fullBio.classList.toggle('expanded');
+                this.classList.toggle('active');
+                this.textContent = fullBio.classList.contains('expanded') ? 'Read Less' : 'Read Full Bio';
+            });
+        });
+    </script>
