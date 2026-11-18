@@ -13,7 +13,11 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://scarlett-trillia.com/">
     <meta property="og:url" content="https://scarlett-trillia.com/">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://scarlett-trillia.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://scarlett-trillia.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Scarlett Trillia — Yoga, Ayurveda & Jyotish">
     <meta name="twitter:description" content="Integrative Yoga, Ayurveda, and Jyotish for leaders, founders, and high-performing people ready for a deep personal upgrade. Book a free call with Scarlett Trillia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,6 +58,9 @@
         @keyframes fadeIn { to { opacity: 1; } }
 
         .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 100px 60px 120px; }
+        .container--bottom { padding-top: 120px; }
+        .services-band { background: #EDEEE5; padding: 120px 60px; }
+        .services-inner { max-width: 1100px; margin: 0 auto; }
 
         h1 {
             font-family: var(--serif);
@@ -68,31 +75,42 @@
             background-clip: text;
         }
 
-        .tagline { font-family: var(--sans); font-size: 13px; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(44, 44, 44, 0.5); font-weight: 400; margin-bottom: 24px; }
+        .tagline { font-family: var(--serif); font-size: clamp(21px, 3vw, 27px); line-height: 1.4; color: rgba(44, 44, 44, 0.7); font-weight: 400; max-width: 560px; margin: 0 auto 24px; text-wrap: balance; }
 
         /* Intro / Bio section */
-        .bio-section { margin-bottom: 140px; text-align: center; }
+        .bio-section { text-align: center; }
         .intro-lead { font-family: var(--serif); font-size: clamp(30px, 5vw, 46px); line-height: 1.2; font-weight: 600; color: var(--charcoal); max-width: 820px; margin: 0 auto 56px; letter-spacing: -0.01em; }
         .intro-fit { max-width: 720px; margin: 0 auto 56px; }
-        .intro-fit p { font-family: var(--serif); font-size: clamp(21px, 3vw, 26px); line-height: 1.5; color: var(--charcoal); padding: 22px 0; border-top: 1px solid rgba(44, 44, 44, 0.12); }
+        .intro-fit p { font-family: var(--serif); font-size: clamp(21px, 3vw, 26px); line-height: 1.5; color: var(--charcoal); padding: 26px 0; border-top: 1px solid rgba(44, 44, 44, 0.12); text-wrap: balance; }
         .intro-fit p:last-child { border-bottom: 1px solid rgba(44, 44, 44, 0.12); }
-        .intro-fit em { color: var(--terracotta); font-style: italic; }
-        .bio-text { font-family: var(--serif); font-size: clamp(22px, 3.5vw, 28px); line-height: 1.65; font-weight: 400; color: var(--charcoal); max-width: 780px; margin: 0 auto 56px; }
+        .intro-fit em { display: block; margin-top: 4px; color: var(--terracotta); font-style: italic; }
+        .bio-text { font-family: var(--serif); font-size: clamp(22px, 3.5vw, 28px); line-height: 1.65; font-weight: 400; color: var(--charcoal); max-width: 780px; margin: 0 auto 56px; text-wrap: pretty; }
         .intro-close { font-family: var(--serif); font-size: clamp(32px, 5.5vw, 52px); line-height: 1.15; font-weight: 600; color: var(--terracotta); margin-bottom: 32px; letter-spacing: -0.01em; }
         .bio-cta { margin: 8px 0 16px; }
         .cta-button { display: inline-block; font-family: var(--sans); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cream); background: var(--terracotta); padding: 16px 40px; border-radius: 6px; text-decoration: none; transition: all 0.3s ease; border: 2px solid var(--terracotta); }
         .cta-button:hover { background: transparent; color: var(--terracotta); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184, 64, 58, 0.2); }
         .cta-note { font-family: var(--sans); font-size: 13px; color: rgba(44, 44, 44, 0.6); margin-top: 14px; }
-        .bio-accent-image { width: 70%; margin-left: auto; margin-right: auto; border-radius: 8px; overflow: hidden; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); margin-bottom: 32px; margin-top: 56px; }
+        .proof-strip { display: grid; grid-template-columns: 1fr 1fr; max-width: 900px; margin: 72px auto 0; border-top: 1px solid rgba(44, 44, 44, 0.12); border-bottom: 1px solid rgba(44, 44, 44, 0.12); }
+        .proof-item { padding: 32px 36px; }
+        .proof-item + .proof-item { border-left: 1px solid rgba(44, 44, 44, 0.12); }
+        .proof-title { font-family: var(--serif); font-size: 24px; font-weight: 600; color: var(--charcoal); margin-bottom: 8px; line-height: 1.2; }
+        .proof-text { font-family: var(--sans); font-size: 15px; line-height: 1.7; color: rgba(44, 44, 44, 0.7); text-wrap: pretty; }
+        .bio-feature { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center; max-width: 980px; margin: 96px auto 0; text-align: left; }
+        .bio-short { font-family: var(--serif); font-size: clamp(20px, 2.6vw, 24px); line-height: 1.6; color: var(--charcoal); margin-bottom: 20px; text-wrap: pretty; }
+        .bio-accent-image img { object-position: center 20%; }
+        .bio-inline-image { margin: 36px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); aspect-ratio: 3 / 2; }
+        .bio-inline-image img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 35%; }
+        .bio-accent-image { border-radius: 8px; overflow: hidden; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); aspect-ratio: 4 / 5; }
         .bio-accent-image img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center top; }
 
         /* Read More Toggle */
+        .full-bio { max-width: 760px; margin-left: auto; margin-right: auto; }
         .read-more-toggle { background: none; border: none; font-family: var(--sans); font-size: 14px; color: var(--terracotta); text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; padding: 8px 0; transition: color 0.3s ease; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
         .read-more-toggle:hover { color: var(--sage-dark); }
         .read-more-toggle::after { content: '↓'; transition: transform 0.3s ease; }
         .read-more-toggle.active::after { transform: rotate(180deg); }
         .full-bio { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, margin-top 0.5s ease-out; }
-        .full-bio.expanded { max-height: 3000px; margin-top: 40px; text-align: left; }
+        .full-bio.expanded { max-height: 4500px; margin-top: 40px; text-align: left; }
         .bio-detail { font-family: var(--sans); font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 20px; }
         .bio-detail a { color: var(--terracotta); text-decoration: none; transition: color 0.3s ease; }
         .bio-detail a:hover { color: var(--sage-dark); }
@@ -104,14 +122,14 @@
         .bio-list li strong { color: var(--terracotta); }
 
         /* Work With Me — Three Pillars */
-        .services-section { margin-bottom: 140px; }
+        .services-section { margin: 0; }
         .services-title { font-family: var(--serif); font-size: clamp(36px, 5vw, 46px); color: var(--charcoal); margin-bottom: 16px; font-weight: 400; line-height: 1.2; text-align: center; }
         .services-intro { font-family: var(--sans); font-size: 17px; line-height: 1.7; color: rgba(44, 44, 44, 0.7); margin: 0 auto 56px; max-width: 640px; text-align: center; }
 
         .pillars-panel { background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(122, 155, 126, 0.3); border-radius: 12px; padding: 64px 56px 56px; }
         .pillars-head { text-align: center; max-width: 640px; margin: 0 auto 48px; }
         .pillars-name { font-family: var(--serif); font-size: clamp(34px, 5vw, 48px); font-weight: 600; line-height: 1.1; color: var(--charcoal); margin-bottom: 14px; }
-        .pillars-duration { font-family: var(--sans); font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--sage-dark); }
+        .pillars-duration { font-family: var(--sans); font-size: 17px; line-height: 1.7; color: rgba(44, 44, 44, 0.7); text-wrap: balance; }
 
         .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(122, 155, 126, 0.3); border-bottom: 1px solid rgba(122, 155, 126, 0.3); }
         .pillar { padding: 40px 32px; text-align: center; }
@@ -147,6 +165,11 @@
         .closing-band { background: var(--charcoal); color: var(--cream); padding: 96px 24px 56px; text-align: center; }
         .closing-mark { width: 84px; height: 42px; margin: 0 auto 48px; display: block; }
         .closing-mark circle { fill: none; stroke-width: 2; }
+.closing-title { font-family: var(--serif); font-size: clamp(30px, 5vw, 44px); font-weight: 600; line-height: 1.15; color: var(--cream); max-width: 700px; margin: 0 auto 32px; text-wrap: balance; }
+        .closing-cta { margin-bottom: 80px; }
+        .closing-band .cta-note { color: rgba(250, 247, 242, 0.65); }
+        .closing-band .cta-button:hover { background: var(--cream); color: var(--charcoal); border-color: var(--cream); box-shadow: none; }
+        .sticky-cta { display: none; }
         .closing-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 40px; margin-bottom: 72px; }
         .simple-link { font-family: var(--sans); font-size: 16px; color: var(--cream); text-decoration: none; position: relative; padding: 8px 0; transition: color 0.3s ease; }
         .simple-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--terracotta-light); transition: width 0.3s ease; }
@@ -173,11 +196,19 @@
 
         @media (max-width: 768px) {
             .container { padding: 60px 24px 80px; }
+            .container--bottom { padding-top: 80px; }
+            .services-band { padding: 80px 24px; }
             header { margin-bottom: 80px; }
-            .bio-section, .services-section { margin-bottom: 96px; }
             .pillars-panel { padding: 40px 24px; }
-            .bio-accent-image { width: 100%; }
+            .proof-strip { grid-template-columns: 1fr; margin-top: 56px; }
+            .proof-item { padding: 28px 12px; }
+            .proof-item + .proof-item { border-left: none; border-top: 1px solid rgba(44, 44, 44, 0.12); }
+            .bio-feature { grid-template-columns: 1fr; gap: 32px; margin-top: 64px; }
+            .bio-accent-image { aspect-ratio: 4 / 3; }
             .closing-band { padding: 72px 24px 40px; }
+            .closing-cta { margin-bottom: 64px; }
+            .sticky-cta { display: block; position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 20; text-align: center; font-family: var(--sans); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cream); background: var(--terracotta); padding: 16px; border-radius: 6px; text-decoration: none; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); transform: translateY(160%); visibility: hidden; transition: transform 0.3s ease, visibility 0.3s; }
+            .sticky-cta.show { transform: translateY(0); visibility: visible; }
         }
     </style>
     <script type="application/ld+json">
@@ -186,7 +217,7 @@
       "@type": "Person",
       "name": "Scarlett Trillia",
       "url": "https://scarlett-trillia.com/",
-      "image": "https://scarlett-trillia.com/padma.jpg",
+      "image": "https://scarlett-trillia.com/scarlett-portrait.jpg",
       "email": "mailto:scarlettslist@gmail.com",
       "sameAs": [
         "https://www.linkedin.com/in/scarlettslist/"
@@ -221,13 +252,13 @@
                 </svg>
             </div>
             <h1>Scarlett Trillia</h1>
-            <div class="tagline">Yoga · Ayurveda · Jyotish</div>
+            <div class="tagline">Integrative support for high performers and business leaders</div>
         </header>
 
         <!-- Intro Section -->
         <section class="bio-section">
 
-            <h2 class="intro-lead">Complex, high-value, unique people deserve nuanced, personalized support.</h2>
+            <h2 class="intro-lead">Exceptional people with complex lives deserve support designed around them.</h2>
 
             <div class="intro-fit">
                 <p>If you’re ready to be seen in your totality, <em>this is for you.</em></p>
@@ -236,30 +267,47 @@
             </div>
 
             <p class="bio-text">
-                Ancient traditions recognized the interplay between mind, body, and spirit. I was gifted the training and ability to offer deeply integrative, transformative Vedic insights and remedies.
+                Ancient traditions understood that mind, body, and spirit move as one. I was gifted the training to offer that wisdom as deeply integrative insights and remedies, built around your life.
             </p>
 
             <p class="intro-close">Ready for the upgrade of a lifetime?</p>
 
             <div class="bio-cta">
                 <a href="https://calendly.com/scarlett_trillia/consult" class="cta-button" target="_blank" rel="noopener">Let’s Go</a>
-                <p class="cta-note">Free 20-minute call · No commitment</p>
+                <p class="cta-note">Book a free 20-minute initial inquiry call</p>
             </div>
 
-            <div class="bio-accent-image">
-                <img src="padma.jpg" alt="Scarlett Trillia yoga practice">
+            <div class="proof-strip">
+                <div class="proof-item">
+                    <div class="proof-title">Executive Leadership</div>
+                    <p class="proof-text">Served as COO and CEO, with nearly twenty years building and leading businesses.</p>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-title">Experienced Vedic Practitioner</div>
+                    <p class="proof-text">Certified in Yoga and Ayurveda and trained in Jyotish, with over a decade of formal Vedic study.</p>
+                </div>
             </div>
 
-            <button class="read-more-toggle" id="bioToggle">About Scarlett</button>
+            <div class="bio-feature">
+                <div class="bio-accent-image">
+                    <img src="scarlett-portrait.jpg" alt="Portrait of Scarlett Trillia smiling beside a lake" width="1200" height="1598">
+                </div>
+                <div class="bio-feature-text">
+                    <p class="bio-short">I was introduced to yoga as a teenager, and it became a lifelong calling. I have since spent over a decade in formal Vedic study and nearly twenty years building and leading businesses. As a two-time cancer survivor, I know what it is to carry a company and a body through hard seasons at the same time. That understanding is what I bring to every client.</p>
+                    <button class="read-more-toggle" id="bioToggle">More About Scarlett</button>
+                </div>
+            </div>
 
             <div class="full-bio" id="fullBio">
                 <h3 class="bio-section-title">About Me</h3>
                 <p class="bio-detail">
-                    I discovered yoga as a teenager, and what began as curiosity became a lifelong calling. In 2015 I began my formal study in the Vedic sciences, and over the past decade I have taught in private, studio, retreat, and virtual settings across the world — bringing an integrative approach that weaves together all three pillars of the Vedic traditions.
+                    I was introduced to yoga as a teenager, and what began as curiosity became a lifelong calling. In 2015 I began formal study of the Vedic sciences, and in the decade since I have taught privately, in studios, on retreats, and online around the world, weaving Yoga, Ayurveda, and Jyotish into one integrated practice.
                 </p>
                 <p class="bio-detail">
-                    My path has been shaped as much by life as by study. As a 2x cancer survivor and serial entrepreneur, I have navigated profound personal transformation alongside the demands of building and leading new businesses and organizations. These experiences inform the way I show up for every client, with both learned wisdom and lived understanding.
+                    My path has been shaped as much by life as by study. I am a two-time cancer survivor, and I have spent nearly twenty years of my career building and leading businesses. I know what it is to carry a company and a body through hard seasons at the same time. That understanding, alongside my in-depth, applied study of the Vedas, is what I bring to every client.
                 </p>
+
+                <div class="bio-inline-image"><img src="scarlett-lake.jpg" alt="Scarlett Trillia resting beside a lake" loading="lazy" width="1400" height="1750"></div>
 
                 <h3 class="bio-section-title">The Vedic Arts & Sciences</h3>
                 <p class="bio-detail">
@@ -281,61 +329,66 @@
                     and insights for life and business.</li>
                 </ul>
 
-                <h3 class="bio-section-title">Technology & Entrepreneurship</h3>
+                <h3 class="bio-section-title">Business & Advisory</h3>
                 <p class="bio-detail">
-                    I've spent my career building businesses from the ground up, working for nearly 20 years
-                    alongside founders, leaders, and innovators. Today I advise early-stage tech companies on
-                    strategy and growth, drawing on hands-on experience as a startup co-founder and CEO.
+                    I am an experienced, active business advisor to a range of tech ventures, and I have served as both COO and CEO.
                 </p>
             </div>
         </section>
 
-        <!-- Work With Me: Three Pillars -->
+    </div>
+
+    <!-- Work With Me: Three Pillars (tinted full-bleed band) -->
+    <div class="services-band"><div class="services-inner">
         <section class="services-section">
             <h2 class="services-title">Work With Me</h2>
             <p class="services-intro">
-                One integrated program drawing on the full spectrum of Vedic wisdom, tailored to your life and the season you’re in.
+                One comprehensive program, expertly customized to you.
             </p>
 
             <div class="pillars-panel">
                 <div class="pillars-head">
                     <h3 class="pillars-name">The Three Pillars</h3>
-                    <p class="pillars-duration">Three 60-minute sessions + a 30-minute follow-up</p>
+                    <p class="pillars-duration">A private, integrative program with personalized support at every step.</p>
                 </div>
 
                 <div class="pillars-grid">
                     <div class="pillar">
                         <div class="pillar-domain">Mind</div>
                         <div class="pillar-name">Yoga</div>
-                        <p class="pillar-text">Posture, meditation, breath, and philosophy to steady the mind and anchor a daily practice.</p>
+                        <p class="pillar-text">Anchor the mind through postures, meditation, breath, mantra, and philosophy.</p>
                     </div>
                     <div class="pillar">
                         <div class="pillar-domain">Body</div>
                         <div class="pillar-name">Ayurveda</div>
-                        <p class="pillar-text">Your constitution, lifestyle, and remedies, tailored to how your body actually runs.</p>
+                        <p class="pillar-text">Restore the body with lifestyle guidance and remedies optimized for your unique constitution and health concerns.</p>
                     </div>
                     <div class="pillar">
                         <div class="pillar-domain">Spirit</div>
                         <div class="pillar-name">Jyotish</div>
-                        <p class="pillar-text">Your birth chart as a map of timing, purpose, and the decisions in front of you.</p>
+                        <p class="pillar-text">Discover your spirit’s roadmap, understand key timings, illuminate major life events, and refine remedies based on your karmic blueprint.</p>
                     </div>
                 </div>
 
                 <ul class="pillars-includes">
-                    <li>One session per pillar over three weeks</li>
-                    <li>Ongoing support from Scarlett throughout</li>
-                    <li>Collaborative case review with an Ayurvedic Vaidya</li>
-                    <li>Personalized resources and practices</li>
-                    <li>A 30-minute follow-up call 40 days after the series</li>
+                    <li>Three 60-minute private sessions over three weeks, one each in Yoga, Ayurveda, and Jyotish</li>
+                    <li>A collaborative case review with an Ayurvedic Vaidya (traditional Ayurvedic physician)</li>
+                    <li>A personalized 40-day practice, with written recommendations and resources to carry into daily life</li>
+                    <li>Direct access to me on WhatsApp between sessions and throughout your 40-day practice</li>
+                    <li>A final 30-minute review call to refine and integrate what you’ve learned</li>
+                    <li>A bonus one-hour business advisory session, available any time during the program</li>
                 </ul>
 
                 <div class="pillars-cta">
                     <a href="https://calendly.com/scarlett_trillia/consult" class="cta-button" target="_blank" rel="noopener">Let’s Go</a>
-                    <p class="cta-note">Start with a free 20-minute call</p>
+                    <p class="cta-note">Book a free 20-minute initial inquiry call</p>
                 </div>
             </div>
         </section>
 
+    </div></div>
+
+    <div class="container container--bottom">
         <!-- Testimonials Section -->
         <section class="testimonials-section">
             <div class="testimonials-eyebrow">Client Stories</div>
@@ -391,6 +444,12 @@
             <circle cx="85" cy="30" r="28" stroke="#E0827B" />
         </svg>
 
+        <h2 class="closing-title">Ready for the upgrade of a lifetime?</h2>
+        <div class="closing-cta">
+            <a href="https://calendly.com/scarlett_trillia/consult" class="cta-button" target="_blank" rel="noopener">Let’s Go</a>
+            <p class="cta-note">Book a free 20-minute initial inquiry call</p>
+        </div>
+
         <nav class="closing-links" aria-label="Links">
             <a href="https://www.linkedin.com/in/scarlettslist/" class="simple-link" target="_blank" rel="noopener">LinkedIn</a>
             <a href="mailto:scarlettslist@gmail.com" class="simple-link">Email</a>
@@ -403,13 +462,37 @@
         </footer>
     </div>
 
+    <a href="https://calendly.com/scarlett_trillia/consult" class="sticky-cta" id="stickyCta" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Let’s Go</a>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            var sticky = document.getElementById('stickyCta');
+            var ctas = document.querySelectorAll('.cta-button');
+            var ticking = false;
+            function updateSticky() {
+                ticking = false;
+                var vh = window.innerHeight;
+                var pastFirst = ctas[0].getBoundingClientRect().bottom < 0;
+                var anyVisible = Array.prototype.some.call(ctas, function(el) {
+                    var r = el.getBoundingClientRect();
+                    return r.top < vh && r.bottom > 0;
+                });
+                var show = pastFirst && !anyVisible;
+                sticky.classList.toggle('show', show);
+                sticky.setAttribute('aria-hidden', show ? 'false' : 'true');
+                sticky.tabIndex = show ? 0 : -1;
+            }
+            window.addEventListener('scroll', function() {
+                if (!ticking) { ticking = true; requestAnimationFrame(updateSticky); }
+            }, { passive: true });
+            window.addEventListener('resize', updateSticky);
+            updateSticky();
+
             document.getElementById('bioToggle').addEventListener('click', function() {
                 const fullBio = document.getElementById('fullBio');
                 fullBio.classList.toggle('expanded');
                 this.classList.toggle('active');
-                this.textContent = fullBio.classList.contains('expanded') ? 'Show Less' : 'About Scarlett';
+                this.textContent = fullBio.classList.contains('expanded') ? 'Show Less' : 'More About Scarlett';
             });
         });
     </script>
